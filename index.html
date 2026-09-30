@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO Primary Meta Tags -->
-    <title>Risol Cihuyyy | Risol Homemade Mayo & Mayo Pedas</title>
+    <title>Risol Nyam | Risol Homemade</title>
     <meta
       name="title"
       content="Risol Nyam | Risol Homemade Mayo & Mayo Pedas"
@@ -119,6 +119,22 @@
             <li><a href="#cara-pesan" class="nav-link">Cara Pesan</a></li>
             <li><a href="#faq" class="nav-link">FAQ</a></li>
             <li><a href="#kontak" class="nav-link">Kontak</a></li>
+            <li>
+              <a
+                href="#keranjang"
+                class="nav-link nav-cart-link"
+                aria-label="Keranjang belanja"
+              >
+                <i data-lucide="shopping-cart"></i>
+                <span
+                  id="cart-badge"
+                  class="cart-badge"
+                  aria-live="polite"
+                  aria-label="Jumlah produk di keranjang"
+                  hidden
+                >0</span>
+              </a>
+            </li>
             <!-- Mobile view CTA button -->
             <li class="mobile-cta-item">
               <button
@@ -247,7 +263,7 @@
         <div class="section-header fade-up">
           <h2 class="section-title">Menu Favorit Kami</h2>
           <p class="section-subtitle">
-            Dua pilihan rasa dengan isian creamy yang bikin susah berhenti.
+            Banyak pilihan rasa dengan isian creamy yang bikin susah berhenti.
           </p>
         </div>
 
@@ -283,15 +299,14 @@
                   >
                 </div>
                 <button
-                  onclick="
-                    sendWhatsAppOrder(
-                      'Halo Risol Nyam, saya ingin memesan Risol Mayo.',
-                    )
-                  "
-                  class="btn btn-primary btn-whatsapp btn-sm"
-                >
-                  <i data-lucide="shopping-bag"></i> Pesan Risol Mayo
-                </button>
+                    type="button"
+                    class="btn btn-primary btn-whatsapp btn-sm add-to-cart"
+                    data-id="mayo"
+                    data-name="Risol Mayo"
+                    data-price="5000"
+                  >
+                    <i data-lucide="shopping-cart"></i>
+                  </button>
               </div>
             </div>
           </div>
@@ -327,14 +342,62 @@
                   >
                 </div>
                 <button
-                  onclick="
-                    sendWhatsAppOrder(
-                      'Halo Risol Nyam, saya ingin memesan Risol Mayo Pedas.',
-                    )
-                  "
-                  class="btn btn-primary btn-whatsapp btn-sm"
+                    type="button"
+                    class="btn btn-primary btn-whatsapp btn-sm add-to-cart"
+                    data-id="mayo-pedas"
+                    data-name="Risol Mayo Pedas"
+                    data-price="5500"
+                  >
+                    <i data-lucide="shopping-cart"></i>
+                  </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT 3: RISOL MACHA -->
+          <div class="product-card fade-up delay-3">
+            <div class="product-image-container">
+              <span class="badge badge-warning product-badge">
+                New
+              </span>
+              <img
+                src="images/risol-macha.webp"
+                alt="Risol Macha Risol Nyam"
+                width="400"
+                height="300"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <div class="product-content">
+              <h3 class="product-title">Risol Macha</h3>
+
+              <p class="product-description">
+                Nikmati varian Risol Macha dengan cita rasa khas
+                yang cocok untuk menemani waktu santaimu.
+              </p>
+
+              <div class="product-footer">
+                <div class="product-price-container">
+                  <span class="product-price-label">Harga Spesial</span>
+                  <span class="product-price">
+                    Rp5.000
+                    <small style="font-size: 0.85rem; font-weight: 500">
+                      / pcs
+                    </small>
+                  </span>
+                </div>
+
+                <button
+                  type="button"
+                  class="btn btn-primary btn-whatsapp btn-sm add-to-cart"
+                  data-id="macha"
+                  data-name="Risol Macha"
+                  data-price="5000"
                 >
-                  <i data-lucide="shopping-bag"></i> Pesan Mayo Pedas
+                  <i data-lucide="shopping-cart"></i>
+                  Tambah ke Keranjang
                 </button>
               </div>
             </div>
@@ -342,6 +405,97 @@
         </div>
       </div>
     </section>
+
+    <!-- CART & CHECKOUT -->
+<section class="section section-alt" id="keranjang">
+  <div class="container">
+    <div class="section-header fade-up">
+      <h2 class="section-title">Keranjang Belanja</h2>
+      <p class="section-subtitle">
+        Periksa pesanan dan lengkapi detail pembelian.
+      </p>
+    </div>
+
+    <div class="cart-container">
+      <div id="cart-items" aria-live="polite">
+        Keranjang masih kosong.
+      </div>
+
+      <div class="cart-summary">
+        <p>
+          Jumlah produk:
+          <strong id="cart-count">0</strong>
+        </p>
+        <h3>
+          Total:
+          <span id="cart-total">Rp0</span>
+        </h3>
+      </div>
+
+      <div class="checkout-container">
+        <h3>Detail Pemesanan</h3>
+
+        <form id="checkout-form">
+          <div class="form-group">
+            <label for="customer-name">Nama pemesan</label>
+            <input
+              type="text"
+              id="customer-name"
+              placeholder="Masukkan nama"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="pickup-location">
+              Lokasi pengambilan
+            </label>
+            <input
+              type="text"
+              id="pickup-location"
+              placeholder="Contoh: Stand bazar kampus"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="payment-method">
+              Metode pembayaran
+            </label>
+            <select id="payment-method" required>
+              <option value="">Pilih pembayaran</option>
+              <option value="QRIS">QRIS</option>
+              <option value="Tunai saat pengambilan">
+                Tunai saat pengambilan
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="customer-note">
+              Catatan tambahan (opsional)
+            </label>
+            <textarea
+              id="customer-note"
+              placeholder="Tulis catatan jika ada"
+            ></textarea>
+          </div>
+
+          <p id="checkout-error" role="alert"></p>
+
+          <button
+            type="submit"
+            id="checkout-button"
+            class="btn btn-primary btn-whatsapp"
+          >
+            <i data-lucide="message-circle"></i>
+            Checkout via WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- ==========================================
        ABOUT / KEUNGGULAN SECTION (#tentang)
