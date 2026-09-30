@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Primary Meta Tags -->
+    <title>Risol Cihuyyy | Risol Homemade Mayo & Mayo Pedas</title>
+    <meta
+      name="title"
+      content="Risol Nyam | Risol Homemade Mayo & Mayo Pedas"
+    />
+    <meta
+      name="description"
+      content="Risol homemade crispy dengan isian creamy melimpah. Tersedia Risol Mayo dan Risol Mayo Pedas. Pesan mudah melalui WhatsApp."
+    />
+    <meta
+      name="keywords"
+      content="risol, risol mayo, risol mayo pedas, risol homemade, camilan renyah, risol lumer, kuliner solo"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Indonesian" />
+    <meta name="author" content="Risol Nyam" />
+
+    <!-- Canonical Placeholder -->
+    <link rel="canonical" href="https://risolnyam.com/" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://risolnyam.com/" />
+    <meta
+      property="og:title"
+      content="Risol Nyam | Renyah di Luar, Lumer di Dalam"
+    />
+    <meta
+      property="og:description"
+      content="Nikmati risol homemade dengan kulit crispy dan isian creamy melimpah. Pesan segar setiap hari via WhatsApp."
+    />
+    <meta property="og:image" content="images/hero-risol.webp" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:title"
+      content="Risol Nyam | Risol Homemade Mayo & Mayo Pedas"
+    />
+    <meta
+      property="twitter:description"
+      content="Risol homemade crispy dengan isian creamy melimpah. Pesan sekarang via WhatsApp!"
+    />
+    <meta property="twitter:image" content="images/hero-risol.webp" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Lucide Icons Library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- JSON-LD Structured Data for Local Business / Food Establishment -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FoodEstablishment",
+        "name": "RISOL NYAM",
+        "image": "images/logo.png",
+        "description": "Risol homemade crispy dengan isian creamy melimpah. Renyah di Luar, Lumer di Dalam.",
+        "telephone": "+6281234567890",
+        "priceRange": "Rp5.000 - Rp90.000",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Solo",
+          "addressRegion": "Jawa Tengah",
+          "addressCountry": "ID"
+        },
+        "servesCuisine": "Indonesian Snack / Risol",
+        "url": "https://risolnyam.com/"
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ==========================================
+       NAVBAR SECTION
+       ========================================== -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-container">
+        <!-- Brand Logo -->
+        <a
+          href="#hero"
+          class="brand-logo"
+          aria-label="Halaman Utama Risol Nyam"
+        >
+          <img
+            src="images/logo.png"
+            alt="Logo RISOL NYAM"
+            width="42"
+            height="42"
+          />
+          <span>RISOL NYAM</span>
+        </a>
+
+        <!-- Desktop & Mobile Navigation Links -->
+        <nav>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#hero" class="nav-link">Home</a></li>
+            <li><a href="#produk" class="nav-link">Produk</a></li>
+            <li><a href="#tentang" class="nav-link">Tentang</a></li>
+            <li><a href="#paket" class="nav-link">Paket</a></li>
+            <li><a href="#cara-pesan" class="nav-link">Cara Pesan</a></li>
+            <li><a href="#faq" class="nav-link">FAQ</a></li>
+            <li><a href="#kontak" class="nav-link">Kontak</a></li>
+            <!-- Mobile view CTA button -->
+            <li class="mobile-cta-item">
+              <button
+                onclick="
+                  sendWhatsAppOrder('Halo Risol Nyam, saya ingin pesan risol.')
+                "
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+              >
+                <i data-lucide="message-circle"></i> Pesan Sekarang
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Desktop CTA Button -->
+        <div class="nav-cta">
+          <!-- EDIT NOMOR/PESAN WHATSAPP DI FILE js/script.js -->
+          <button
+            onclick="
+              sendWhatsAppOrder(
+                'Halo Risol Nyam, saya ingin melakukan pemesanan.',
+              )
+            "
+            class="btn btn-primary"
+            aria-label="Pesan via WhatsApp"
+          >
+            <i data-lucide="message-circle"></i> Pesan Sekarang
+          </button>
+        </div>
+
+        <!-- Hamburger Button for Mobile -->
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Buka menu navigasi"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <!-- Left Content Column -->
+        <div class="hero-text fade-up">
+          <div class="hero-tag">
+            <i data-lucide="sparkles"></i> Homemade & Fresh Everyday
+          </div>
+          <h1 class="hero-title">
+            Risol Homemade yang <span class="highlight">Renyah di Luar</span>,
+            Lumer di Dalam
+          </h1>
+          <p class="hero-subtitle">
+            Nikmati risol homemade dengan kulit crispy dan isian creamy
+            melimpah. Dibuat fresh menggunakan bahan pilihan untuk menemani
+            setiap momenmu.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions">
+            <button
+              onclick="
+                sendWhatsAppOrder('Halo Risol Nyam, saya ingin pesan risol.')
+              "
+              class="btn btn-primary btn-whatsapp"
+            >
+              <i data-lucide="message-circle"></i> Pesan Sekarang
+            </button>
+            <a href="#produk" class="btn btn-secondary">
+              Lihat Menu <i data-lucide="arrow-down-right"></i>
+            </a>
+          </div>
+
+          <!-- Micro Benefits checklist -->
+          <div class="hero-benefits">
+            <div class="benefit-item">
+              <span class="benefit-icon">✓</span> Fresh dibuat setiap hari
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">✓</span> Isian creamy melimpah
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">✓</span> Varian original & pedas
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Image Column with Blob Decoration -->
+        <div class="hero-image-wrapper fade-up delay-2">
+          <div class="hero-blob"></div>
+          <div class="hero-image-card">
+            <img
+              src="images/hero-risol.webp"
+              alt="Risol Nyam renyah di luar lumer di dalam"
+              width="600"
+              height="450"
+              decoding="async"
+            />
+          </div>
+          <!-- Floating badge overlay -->
+          <div class="hero-float-badge">
+            <div class="hero-float-icon">
+              <i data-lucide="flame"></i>
+            </div>
+            <div class="hero-float-text">
+              <span class="hero-float-title">100% Homemade</span>
+              <span class="hero-float-sub">Resep Spesial Khas Risol Nyam</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       SECTION PRODUK (#produk)
+       ========================================== -->
+    <section class="section section-alt" id="produk">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2 class="section-title">Menu Favorit Kami</h2>
+          <p class="section-subtitle">
+            Dua pilihan rasa dengan isian creamy yang bikin susah berhenti.
+          </p>
+        </div>
+
+        <div class="product-grid">
+          <!-- PRODUCT 1: RISOL MAYO -->
+          <div class="product-card fade-up delay-1">
+            <div class="product-image-container">
+              <span class="badge badge-warning product-badge">Best Seller</span>
+              <img
+                src="images/risol-mayo.webp"
+                alt="Risol Mayo Original Risol Nyam"
+                width="400"
+                height="300"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Risol Mayo</h3>
+              <p class="product-description">
+                Perpaduan mayo creamy, telur, dan smoked beef yang dibalut kulit
+                risol crispy keemasan.
+              </p>
+              <div class="product-footer">
+                <div class="product-price-container">
+                  <span class="product-price-label">Harga Spesial</span>
+                  <!-- EDIT HARGA PRODUK 1 DI SINI -->
+                  <span class="product-price"
+                    >Rp5.000
+                    <small style="font-size: 0.85rem; font-weight: 500"
+                      >/ pcs</small
+                    ></span
+                  >
+                </div>
+                <button
+                  onclick="
+                    sendWhatsAppOrder(
+                      'Halo Risol Nyam, saya ingin memesan Risol Mayo.',
+                    )
+                  "
+                  class="btn btn-primary btn-whatsapp btn-sm"
+                >
+                  <i data-lucide="shopping-bag"></i> Pesan Risol Mayo
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT 2: RISOL MAYO PEDAS -->
+          <div class="product-card fade-up delay-2">
+            <div class="product-image-container">
+              <span class="badge badge-spicy product-badge">Spicy</span>
+              <img
+                src="images/risol-mayo-pedas.webp"
+                alt="Risol Mayo Pedas Risol Nyam"
+                width="400"
+                height="300"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">Risol Mayo Pedas</h3>
+              <p class="product-description">
+                Risol mayo creamy dengan telur dan smoked beef yang dipadukan
+                dengan sensasi pedas gurih.
+              </p>
+              <div class="product-footer">
+                <div class="product-price-container">
+                  <span class="product-price-label">Harga Spesial</span>
+                  <!-- EDIT HARGA PRODUK 2 DI SINI -->
+                  <span class="product-price"
+                    >Rp5.500
+                    <small style="font-size: 0.85rem; font-weight: 500"
+                      >/ pcs</small
+                    ></span
+                  >
+                </div>
+                <button
+                  onclick="
+                    sendWhatsAppOrder(
+                      'Halo Risol Nyam, saya ingin memesan Risol Mayo Pedas.',
+                    )
+                  "
+                  class="btn btn-primary btn-whatsapp btn-sm"
+                >
+                  <i data-lucide="shopping-bag"></i> Pesan Mayo Pedas
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       ABOUT / KEUNGGULAN SECTION (#tentang)
+       ========================================== -->
+    <section class="section" id="tentang">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2 class="section-title">Kenapa Harus Risol Nyam?</h2>
+          <p class="section-subtitle">
+            Kualitas rasa dan kelezatan di setiap gigitan adalah prioritas utama
+            kami.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-card fade-up delay-1">
+            <div class="feature-icon-wrapper">
+              <i data-lucide="clock"></i>
+            </div>
+            <h3 class="feature-title">Fresh Setiap Hari</h3>
+            <p class="feature-desc">
+              Risol dibuat fresh agar rasa dan teksturnya tetap maksimal saat
+              diterima.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="feature-card fade-up delay-2">
+            <div class="feature-icon-wrapper">
+              <i data-lucide="heart"></i>
+            </div>
+            <h3 class="feature-title">Isian Melimpah</h3>
+            <p class="feature-desc">
+              Setiap risol diisi dengan perpaduan mayo creamy dan bahan pilihan
+              berkualitas.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="feature-card fade-up delay-3">
+            <div class="feature-icon-wrapper">
+              <i data-lucide="sparkles"></i>
+            </div>
+            <h3 class="feature-title">Crispy & Gurih</h3>
+            <p class="feature-desc">
+              Lapisan luar renyah keemasan dengan tekstur lembut dan creamy di
+              bagian dalam.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="feature-card fade-up delay-4">
+            <div class="feature-icon-wrapper">
+              <i data-lucide="party-popper"></i>
+            </div>
+            <h3 class="feature-title">Segala Momen</h3>
+            <p class="feature-desc">
+              Cocok untuk camilan santai, keluarga, meeting kantor, arisan
+              hingga acara spesial.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       PAKET PEMESANAN SECTION (#paket)
+       ========================================== -->
+    <section class="section section-alt" id="paket">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2 class="section-title">Mau Pesan Lebih Banyak?</h2>
+          <p class="section-subtitle">
+            Pilih paket hemat untuk acara spesial atau kumpul keluarga.
+          </p>
+        </div>
+
+        <div class="packages-grid">
+          <!-- PAKET 1: SANTAI -->
+          <!-- EDIT HARGA DAN JUMLAH PAKET SANTAI DI SINI -->
+          <div class="package-card fade-up delay-1">
+            <h3 class="package-name">Paket Santai</h3>
+            <span class="package-qty">5 pcs Risol</span>
+            <div class="package-price">Rp24.000</div>
+            <div class="package-features">
+              <div class="package-feature-item">
+                <i data-lucide="check-circle-2"></i> Bisa Mix Varian Rasa
+              </div>
+              <div class="package-feature-item">
+                <i data-lucide="check-circle-2"></i> Kemasan Box Hygienis
+              </div>
+              <div class="package-feature-item">
+                <i data-lucide="check-circle-2"></i> Dibuat Fresh By Order
+              </div>
+            </div>
+            <button
+              onclick="
+                sendWhatsAppOrder(
+                  'Halo Risol Nyam, saya ingin pesan Paket Santai (5 pcs).',
+                )
+              "
+              class="btn btn-secondary style-full"
+              style="width: 100%"
+            >
+              Pesan Paket Santai
+            </button>
+          </div>
+
+          <!-- PAKET 2: SHARING (RECOMMENDED) -->
+          <!-- EDIT HARGA DAN JUMLAH PAKET SHARING DI SINI -->
+          <div class="package-card recommended fade-up delay-2">
+            <span class="package-recommended-badge">Paling Laris</span>
+            <h3 class="package-name">Paket Sharing</h3>
+            <span class="package-qty">10 pcs Risol</span>
+            <div class="package-price">Rp47.000</div>
+            <div class="package-features">
+              <div class="package-feature-item">
+                <i data-lucide="check-circle-2"></i> Bebas Mix Mayo & Mayo Pedas
+              </div>
+              <div class="package-feature-item">
+                <i data-lucide="check-circle-2"></i> Hemat & Pas Buat Kumpul
+              </div>
+              <div class="package-feature-item">
+                <i data-lucide="check-circle-2"></i> Gratis Extra Saus Mayo
+              </div>
+            </div>
+            <button
+              onclick="
+                sendWhatsAppOrder(
+                  'Halo Risol Nyam, saya ingin pesan Paket Sharing (10 pcs).',
+                )
+              "
+              class="btn btn-primary btn-whatsapp"
+              style="width: 100%"
+            >
+              <i data-lucide="message-circle"></i> Pesan Paket Sharing
+            </button>
+          </div>
+
+          <!-- PAKET 3: RAME-RAME -->
+          <!-- EDIT HARGA DAN JUMLAH PAKET RAME-RAME DI SINI -->
+          <div class="package-card fade-up delay-3">
+            <h3 class="package-name">Paket Rame-Rame</h3>
+            <span class="package-qty">20 pcs Risol</span>
+            <div class="package-price">Rp90.000</div>
+            <div class="package-features">
+              <div class="package-feature-item">
+                <i data-lucide="check-circle-2"></i> Porsi Besar Lebih Hemat
+              </div>
+              <div class="package-feature-item">
+                <i data-lucide="check-circle-2"></i> Bebas Custom Komposisi
+              </div>
+              <div class="package-feature-item">
+                <i data-lucide="check-circle-2"></i> Cocok Buat Arisan / Office
+              </div>
+            </div>
+            <button
+              onclick="
+                sendWhatsAppOrder(
+                  'Halo Risol Nyam, saya ingin pesan Paket Rame-Rame (20 pcs).',
+                )
+              "
+              class="btn btn-secondary"
+              style="width: 100%"
+            >
+              Pesan Paket Rame-Rame
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       CARA PESAN SECTION (#cara-pesan)
+       ========================================== -->
+    <section class="section" id="cara-pesan">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2 class="section-title">Cara Pesan</h2>
+          <p class="section-subtitle">
+            Hanya 4 langkah mudah untuk menikmati risol creamy favoritmu.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <!-- Step 01 -->
+          <div class="step-card fade-up delay-1">
+            <div class="step-number">01</div>
+            <h3 class="step-title">Pilih Menu</h3>
+            <p class="step-desc">
+              Pilih varian risol atau paket hemat yang kamu inginkan.
+            </p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="step-card fade-up delay-2">
+            <div class="step-number">02</div>
+            <h3 class="step-title">Klik Pesan</h3>
+            <p class="step-desc">
+              Tekan tombol pesan pada produk atau tombol WhatsApp.
+            </p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="step-card fade-up delay-3">
+            <div class="step-number">03</div>
+            <h3 class="step-title">Chat WhatsApp</h3>
+            <p class="step-desc">
+              Kamu akan langsung diarahkan ke chat admin WhatsApp kami.
+            </p>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="step-card fade-up delay-4">
+            <div class="step-number">04</div>
+            <h3 class="step-title">Pesanan Diproses</h3>
+            <p class="step-desc">
+              Konfirmasi jumlah, alamat pengiriman, dan metode pembayaran.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       TESTIMONIALS SECTION (#testimoni)
+       ========================================== -->
+    <section class="section section-alt" id="testimoni">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2 class="section-title">Kata Mereka</h2>
+          <p class="section-subtitle">
+            Apa kata para pecinta risol yang sudah mencicipi kelezatan Risol
+            Nyam?
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card fade-up delay-1">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "Risolnya crispy dan isiannya banyak banget. Mayo-nya creamy,
+              enak!"
+            </p>
+            <div class="testimonial-author">— Aulia</div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card fade-up delay-2">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "Yang mayo pedas favorit banget. Pedasnya pas dan nggak bikin
+              enek."
+            </p>
+            <div class="testimonial-author">— Dinda</div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card fade-up delay-3">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "Cocok buat snack kumpul keluarga. Bakal order lagi."
+            </p>
+            <div class="testimonial-author">— Raka</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       BIG CTA BANNER SECTION
+       ========================================== -->
+    <section class="section" style="padding-bottom: 2rem">
+      <div class="container">
+        <div class="cta-banner fade-up">
+          <h2 class="cta-title">Sudah Siap Nyemil Risol?</h2>
+          <p class="cta-subtitle">
+            Pesan sekarang dan nikmati risol crispy dengan isian creamy
+            favoritmu.
+          </p>
+          <button
+            onclick="
+              sendWhatsAppOrder(
+                'Halo Risol Nyam, saya ingin melakukan pemesanan sekarang!',
+              )
+            "
+            class="btn btn-whatsapp"
+            style="padding: 1.1rem 2.25rem; font-size: 1.1rem"
+          >
+            <i
+              data-lucide="message-circle"
+              style="width: 24px; height: 24px"
+            ></i>
+            Pesan via WhatsApp
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       FAQ SECTION (#faq)
+       ========================================== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2 class="section-title">Pertanyaan yang Sering Ditanyakan</h2>
+          <p class="section-subtitle">
+            Punya pertanyaan seputar pesanan? Cek jawabannya di bawah ini.
+          </p>
+        </div>
+
+        <div class="faq-container fade-up">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Apakah risol dibuat fresh?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Ya, risol kami dibuat secara fresh setiap hari untuk menjaga
+                kualitas rasa, kelezatan isian creamy, dan tekstur renyahnya.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Apakah tersedia varian pedas?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Ya, tersedia varian Risol Mayo Pedas bagi Anda yang menyukai
+                perpaduan gurih creamy dengan sensasi pedas mantap.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Apakah bisa pesan dalam jumlah banyak?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Bisa banget! Kami menerima pemesanan skala besar untuk acara
+                ulang tahun, meeting kantor, arisan, hingga hajatan spesial.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Apakah bisa COD?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Silakan konfirmasi area pengiriman dan metode COD (Cash on
+                Delivery) melalui WhatsApp admin kami.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Bagaimana cara memesannya?</span>
+              <i data-lucide="chevron-down" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Cukup pilih produk favorit Anda di atas, lalu klik tombol
+                "Pesan". Anda akan langsung terhubung ke WhatsApp kami untuk
+                pemesanan instan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       KONTAK SECTION (#kontak)
+       ========================================== -->
+    <!-- EDIT DATA KONTAK DI BAWAH INI -->
+    <section class="section section-alt" id="kontak">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2 class="section-title">Hubungi Kami</h2>
+          <p class="section-subtitle">
+            Ada pertanyaan lain? Kami siap melayani pesanan Anda.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact 1: WhatsApp -->
+          <div class="contact-card fade-up delay-1">
+            <div class="contact-icon">
+              <i data-lucide="phone-call"></i>
+            </div>
+            <div class="contact-label">WhatsApp</div>
+            <!-- EDIT NOMOR HP/WA DI SINI -->
+            <div class="contact-val">0812-3456-7890</div>
+          </div>
+
+          <!-- Contact 2: Instagram -->
+          <div class="contact-card fade-up delay-2">
+            <div class="contact-icon">
+              <i data-lucide="instagram"></i>
+            </div>
+            <div class="contact-label">Instagram</div>
+            <!-- EDIT INSTAGRAM DI SINI -->
+            <div class="contact-val">@risolnyam</div>
+          </div>
+
+          <!-- Contact 3: Area Pengiriman -->
+          <div class="contact-card fade-up delay-3">
+            <div class="contact-icon">
+              <i data-lucide="map-pin"></i>
+            </div>
+            <div class="contact-label">Area Layanan</div>
+            <!-- EDIT AREA OPERASIONAL DI SINI -->
+            <div class="contact-val">Solo dan sekitarnya</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+       FOOTER SECTION
+       ========================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Column 1: Brand Info -->
+          <div class="footer-brand">
+            <a href="#hero" class="brand-logo" style="margin-bottom: 0.75rem">
+              <img
+                src="images/logo.png"
+                alt="Logo RISOL NYAM"
+                width="36"
+                height="36"
+              />
+              <span>RISOL NYAM</span>
+            </a>
+            <p class="footer-tagline">"Renyah di Luar, Lumer di Dalam"</p>
+            <p
+              style="font-size: 0.875rem; color: #8c7a6b; margin-bottom: 1.5rem"
+            >
+              Usaha makanan rumahan risol mayo homemade berkualitas tinggi
+              dengan cita rasa khas creamy dan crispy.
+            </p>
+            <div class="footer-socials">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener"
+                class="footer-social-link"
+                aria-label="Instagram Risol Nyam"
+              >
+                <i data-lucide="instagram"></i>
+              </a>
+              <a
+                href="https://wa.me/6281234567890"
+                target="_blank"
+                rel="noopener"
+                class="footer-social-link"
+                aria-label="WhatsApp Risol Nyam"
+              >
+                <i data-lucide="message-circle"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div>
+            <h4 class="footer-heading">Navigasi Cepat</h4>
+            <ul class="footer-links">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#produk">Menu Produk</a></li>
+              <li><a href="#tentang">Keunggulan</a></li>
+              <li><a href="#paket">Paket Pemesanan</a></li>
+              <li><a href="#cara-pesan">Cara Pesan</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Bantuan & FAQ -->
+          <div>
+            <h4 class="footer-heading">Bantuan</h4>
+            <ul class="footer-links">
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#kontak">Hubungi Kami</a></li>
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  onclick="
+                    sendWhatsAppOrder(
+                      'Halo, saya ingin bertanya tentang syarat pemesanan.',
+                    )
+                  "
+                  >Konsultasi Pesanan</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 Risol Nyam. All Rights Reserved. Made with ❤️ for Risol
+            Lovers.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==========================================
+       FLOATING WHATSAPP BUTTON (RIGHT BOTTOM STICKY)
+       ========================================== -->
+    <a
+      href="javascript:void(0)"
+      onclick="
+        sendWhatsAppOrder('Halo Risol Nyam, saya ingin melakukan pemesanan.')
+      "
+      class="floating-wa"
+      aria-label="Chat WhatsApp Risol Nyam"
+    >
+      <div class="floating-wa-icon">
+        <i data-lucide="message-circle"></i>
+      </div>
+      <span class="floating-wa-text">Pesan sekarang</span>
+    </a>
+
+    <!-- Custom JavaScript Script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
